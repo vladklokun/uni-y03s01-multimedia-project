@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Git</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./material.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image demo-avatar" src="avatar-w.png">			
+          </span>
+          <div class="android-header-spacer mdl-layout-spacer"></div>  		  
+        </div>
+      </div>
+	  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color: #f44336">
+          <img class="android-logo-image demo-avatar" src="avatar-w.png">
+        </span>
+        <nav class="mdl-navigation">       
+          <a class="mdl-navigation__link" href="index.html">Вступ</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Уроки</span>
+          <a class="mdl-navigation__link" href="lesson1.html">Що таке Git?</a>
+          <a class="mdl-navigation__link" href="lesson2.html">Установка Git</a>
+          <a class="mdl-navigation__link" href="lesson3.html">Первинне налаштування Git</a>
+          <a class="mdl-navigation__link" href="lesson4.html">Документація</a>
+		  <a class="mdl-navigation__link" href="lesson5.html">Створення репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson6.html">Налаштування репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson7.html">Додавання файлів</a>
+		  <a class="mdl-navigation__link" href="lesson8.html">Історія змін</a>
+		  <a class="mdl-navigation__link" href="lesson9.html">Скасування дій</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Тестування</span>
+          <a class="mdl-navigation__link" href="">Тест 1</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Інші формати уроків</span>
+          <a class="mdl-navigation__link" href="">Відео-версія</a>
+          <a class="mdl-navigation__link" href="">Аудіо-версія</a>
+        </nav>
+      </div>
+
+	  
+
+		<main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h2>Вступ</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<p>Кожен проект — не важливо, програмний чи ні — на шляху від ідеї до реалізації постійно та невпинно змінюється: створюються та оновлюються початкові файли проекту, наприклад, початковий код, інструкції зі зборки та документація програм; графічні шаблони і ресурси веб-сайтів, афіш, логотипів або шрифтів; короткі описи, нотатки чи сюжетні лінії книги; дані, рішення та звіти до лабораторних, курсових та дипломних робіт — можливості обмежені тільки фантазією.</p>
+
+						<p>У процесі еволюції з внесенням змін проекти можуть знаходитись у різних станах, які називаються версіями. Збереження та грамотна документація цих версій дозволить логічно організувати командну роботу, надасть можливість відстежувати та точно виявляти негативно вплинувші зміни, а також повертатись до останнього вдалого стану проекту, що значно спрощує процес створення, розробки та управління проектом.</p>
+
+						<p>Саме для задоволення цих та інших потреб були розроблені системи контролю версій.</p>
+					</div>	
+				</div>
+				<div class="mdl-layout-spacer"></div>	
+			</div>
+			
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Що таке система контролю версій?</h3>
+					</div>
+					<div class="mdl-card__supporting-text">	
+						<p>Система контролю версій — це система, яке відстежує історію та деталі змін певного файлу або набору файлів. Вона дозволяє повертати обрані файли до попереднього стану, повертати цілий проект до попереднього стану, порівнювати будь-які версії та зміни файлу, переглядати, хто змінив проблемний файл та інше. Взагалі, використання системи контролю версій дозволяє безболісно та без особливих складностей відновити стан проекту у разі помилкових, небажаних змін проекту або втрати файлів.</p>
+
+						<p>Існують локальні, централізовані та розподілені системи контролю версій. Локальні системи дозволяють зберігати базу версій проекту на локальному комп'ютері. Якщо на локальному комп'ютері вручну зберігати звичайні копії різних версій файлів під різними іменами, це можна вважати найпростішою локальною системою контролю версій. Звичайно, ручний підхід надзвичайно нестійкий до помилок, тому згодом були розроблені перші локальні системи контролю версій, які зберігали усі зміни у простій базі даних.</p>
+
+						<p>Централізовані системи зберігають базу даних на централізованому сервері, який контролює і управляє більшістю або усіма операціями з нею. Недоліком такого підходу є повна залежність від центрального серверу, тобто користувачам необхідно синхронізувати файли кожного разу, коли вони бажають внести зміни. Крім того, централізація означає наявність єдиної точки відмови: якщо головний сервер вимикається на деякий час, у цей період користувачі не зможуть зберегти зміни, над якими працювали. Якщо головний сервер вийде з ладу, то єдиним варіантом відновлення даних є резервні копії (але їх варто використовувати у будь-якому разі).</p>
+
+						<p>Розподілені системи організують свою роботу таким чином, щоб клієнти зберігали повні копії репозиторію при роботі з ними, включаючи повну історію змін, а не лише останню версію. Розподілені системи також використовують клієнт—серверну архітектуру, але у випадку відмови сервера кожна клієнтська копія є резервною і може бути використана для повного відновлення.</p>
+					</div>	
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+		</div>
+		</main>
+	</div>
+
+	
+<script src="./material.min.js"></script>
+</body>
+</html>

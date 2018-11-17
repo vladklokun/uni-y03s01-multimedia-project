@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Git</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./material.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image demo-avatar" src="avatar-w.png">			
+          </span>
+          <div class="android-header-spacer mdl-layout-spacer"></div>  		  
+        </div>
+      </div>
+	  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color: #f44336">
+          <img class="android-logo-image demo-avatar" src="avatar-w.png">
+        </span>
+        <nav class="mdl-navigation">       
+          <a class="mdl-navigation__link" href="index.html">Вступ</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Уроки</span>
+          <a class="mdl-navigation__link" href="lesson1.html">Що таке Git?</a>
+          <a class="mdl-navigation__link" href="lesson2.html">Установка Git</a>
+          <a class="mdl-navigation__link" href="lesson3.html">Первинне налаштування Git</a>
+          <a class="mdl-navigation__link" href="lesson4.html">Документація</a>
+		  <a class="mdl-navigation__link" href="lesson5.html">Створення репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson6.html">Налаштування репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson7.html">Додавання файлів</a>
+		  <a class="mdl-navigation__link" href="lesson8.html">Історія змін</a>
+		  <a class="mdl-navigation__link" href="lesson9.html">Скасування дій</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Тестування</span>
+          <a class="mdl-navigation__link" href="">Тест 1</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Інші формати уроків</span>
+          <a class="mdl-navigation__link" href="">Відео-версія</a>
+          <a class="mdl-navigation__link" href="">Аудіо-версія</a>
+        </nav>
+      </div>
+
+	  
+
+		<main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+			<div class="mdl-grid">
+				<!-- CONTENT -->
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+				  <div class="mdl-card__title">
+					<h2>Установка Git</h2>
+				  </div>
+					<div class="mdl-card__supporting-text">
+					<p>Щоб користуватись Git, необхідно його встановити. Git — безкоштовна програма з відкритим початковим кодом, яку можна завантажити на сайті https://git-scm.com/download/.</p>					
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>	
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+					<h3>Linux</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>Користувачам операційної системи Linux зручно встановити Git за допомогою пакетних менеджерів, вбудованих у дистрибутив. Наприклад, для дистрибутивів, заснованих на Debian варто спробувати таку команду (Примітка: тут і далі <code>$</code> перед командами означає виконання від імені користувача і не є текстом самої команди, тобто не вводиться):</p>
+						
+						<p>
+						<div class="text-editor-wrap">
+							<div class="title-bar"><span class="title">bash</span></div>
+							<div class="text-body">
+								<div id="typed-strings" class="typed-strings0" style="display: none;">						  
+								  <p>sudo apt install git-all</p>
+								</div>
+								$ <span class="typed0" id="typed0"></span>
+							</div>
+						</div>
+						<!-- <code>$ sudo apt install git-all</code> --></p>
+						
+						<p>Для Fedora та RPM-подібних дистрибутивів:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings1" style="display: none;">						  
+									  <p>sudo dnf install git-all</p>
+									</div>
+									$ <span class="typed1" id="typed1"></span>
+								</div>
+							</div>
+						</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+				
+				
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>macOS</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>В операційній системі macOS система контролю версій Git надається у комплекті Xcode Command Line Tools, які зазвичай уже встановлені у користувачів, що займаються програмуванням. Якщо цей інструментарій не встановлений, для початку його установки досить виконати команду і дотримуватись інструкцій на екрані:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings2" style="display: none;">						  
+									  <p>git --version</p>
+									</div>
+									$ <span class="typed2" id="typed2"></span>
+								</div>
+							</div>
+						</p>
+
+						<p>Також Git можна встановити на macOS за допомогою інсталятора, який надається на сайті https://git-scm.com/download/mac/ або за допомогою пакетного менеджера Homebrew:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings3" style="display: none;">						  
+									  <p>brew install git</p>
+									</div>
+									$ <span class="typed3" id="typed3"></span>
+								</div>
+							</div>
+						</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+					
+				
+				
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">	
+						<h3> Windows</h3>
+					</div>
+				
+					<div class="mdl-card__supporting-text">
+						<p>Користувачам операційної системи Windows зручніше за все буде скачати та встановити Git за допомогою інсталятора, наданого на сайті https://git-scm.com/download/win/.</p>
+
+						<h3> Перевірка установки</h3>
+						<p>Після завершення установки Git в операційній системі користувача варто перевірити працездатність Git за допомогою команди:</p>
+						<p>
+						<div class="text-editor-wrap">
+							<div class="title-bar"><span class="title">bash</span></div>
+							<div class="text-body">
+								<div id="typed-strings" class="typed-strings4" style="display: none;">						  
+								  <p>git --version</p>
+								</div>
+								$ <span class="typed4" id="typed4"></span>
+							</div>
+						</div>
+						<!-- <code>
+						$ git --version
+						</code> --></p>
+
+						<p>Якщо вивід приблизно такий, Git встановлений і готовий до роботи:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+								<div id="typed-strings" class="typed-strings5" style="display: none;">						  
+									  <p>git --version</p>
+									  <p>git version 2.19.1</p>
+									</div>
+									$ <span class="typed5" id="typed5"></span>
+								</div>
+							</div>
+						</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>				
+		</div>
+		</main>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script src="./material.min.js"></script>
+<script src="./typed.js"></script>
+
+<script>
+  
+  var count = 0;
+  var offset = 600;
+$('main').scroll(function(){
+  var scrolltop = $(this).scrollTop();
+  $('.typed'+count).each(function(){
+    if(scrolltop >= $(this).offset().top - offset) {	  
+	  var id = '.' + $(this).attr("id");
+	  console.log(count);
+	  var html = $('div.typed-strings'+count).html();
+	  var strings = [];
+	  var children = $('div.typed-strings'+count).children();
+	   $(children).each(function(index, item){  	
+		strings.push($(this)[0]['outerText']);
+		});  	 
+	  var str = [];
+	  str.push(strings.join('<br>'));	  
+	  var typed = new Typed(id, {
+		strings: str, 
+	    typeSpeed: 30
+	  });
+		count++;	
+    }
+  });
+});
+	
+	
+	/*var typed = new Typed('.typed', {
+		stringsElement: '#typed-strings', 
+	typeSpeed: 30
+	  });*/
+
+</script>
+</body>
+</html>
