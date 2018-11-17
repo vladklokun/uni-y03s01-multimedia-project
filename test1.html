@@ -85,7 +85,7 @@
 										<span field-white>$</span> 
 									<div class="mdl-textfield mdl-js-textfield" style="width: 90%">
 									<input class="mdl-textfield__input field-white" type="text" id="answ">
-									<label class="mdl-textfield__label field-white" for="sample1">Text...</label>
+									<label class="mdl-textfield__label field-white" for="sample1">Code...</label>
 								  </div>
 									</div>
 								</div>
@@ -152,36 +152,37 @@
         }
 		else if (num == 1)
 		{
-			countQuest++;
-			if (countQuest == questions.length)
+			var user_answer = document.getElementById('answ').value;
+			console.log(user_answer);
+			if (user_answer != "")
 			{
-				var user_answer = document.getElementById('answ').value;
-				console.log("us: ", user_answer, "true: ", answers[countQuest-1]);
-				if (user_answer == answers[countQuest-1])
+				countQuest++;
+				if (countQuest == questions.length)
 				{
-					plus++;					
+					
+					if (user_answer == answers[countQuest-1])
+					{
+						plus++;					
+					}			
+					if (! dialog.showModal) {
+					  dialogPolyfill.registerDialog(dialog);
+					}
+					  dialog.showModal();
+					  $('.plus').html(plus);
+					  dialog.querySelector('.close').addEventListener('click', function() {
+					  dialog.close();
+					});
 				}
-				console.log(plus);				
-				if (! dialog.showModal) {
-				  dialogPolyfill.registerDialog(dialog);
-				}
-				  dialog.showModal();
-				  $('.plus').html(plus);
-				  dialog.querySelector('.close').addEventListener('click', function() {
-				  dialog.close();
-				});
-			}
-			else
-			{
-				var user_answer = document.getElementById('answ').value;
-				
-				if (user_answer == answers[countQuest-1])
+				else
 				{
-					plus++;					
+						if (user_answer == answers[countQuest-1])
+						{
+							plus++;					
+						}
+						
+						$('.testing .mdl-card__title .mdl-card__title-text').html(questions[countQuest]);
+						document.getElementById('answ').value = null;					
 				}
-				
-				$('.testing .mdl-card__title .mdl-card__title-text').html(questions[countQuest]);
-				document.getElementById('answ').value = null;				
 			}
 		}
         else{
@@ -198,11 +199,6 @@
 			plus = 0;
 			countQuest = 0;
 			test_start = 0;
-            /*else{ 
-             
-                document.getElementById('area').style.display='none';
-                alert('У Вас ' + plus + ' правильных ответа!');
-            }*/
         }
     }
      
