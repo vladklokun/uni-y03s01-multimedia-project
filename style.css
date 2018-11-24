@@ -72,6 +72,17 @@
 }
 /* End RobotoMono Mono definition */
 
+/* Begin Material Icons definition */
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url('./fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+/* End Material Icons definition */
+
 .mdl-card__title
 {
 	width: 100%;
