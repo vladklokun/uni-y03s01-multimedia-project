@@ -26,6 +26,20 @@
 	font-weight: bold;
 	font-style: italic;
 }
+
+@font-face {
+	font-family: roboto;
+	src: url('./fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: roboto;
+	src: url('./fonts/Roboto-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
 /* End Roboto definition */
 
 /* Begin RobotoMono Mono definition */
