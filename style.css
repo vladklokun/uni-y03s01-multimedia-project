@@ -1,3 +1,17 @@
+.mdl-card__title
+{
+	width: 100%;
+    background-color: rgb(244,67,54);
+	color: white;
+}
+.mdl-card.mdl-shadow--4dp.mdl-cell.mdl-cell--8-col.mdl-grid
+{
+	padding: 0;	
+}
+.full-width {
+    min-width: 693.33px;
+}
+
 p
 {
 	font-family:"Roboto";

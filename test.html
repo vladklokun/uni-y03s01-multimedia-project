@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Git</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./material.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image demo-avatar" src="avatar-w.png">			
+          </span>
+          <div class="android-header-spacer mdl-layout-spacer"></div>  		  
+        </div>
+      </div>
+	  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color: #f44336">
+          <img class="android-logo-image demo-avatar" src="avatar-w.png">
+        </span>
+        <nav class="mdl-navigation">       
+          <a class="mdl-navigation__link" href="index.html">Вступ</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Уроки</span>
+          <a class="mdl-navigation__link" href="lesson1.html">Що таке Git?</a>
+          <a class="mdl-navigation__link" href="lesson2.html">Установка Git</a>
+          <a class="mdl-navigation__link" href="lesson3.html">Первинне налаштування Git</a>
+          <a class="mdl-navigation__link" href="lesson4.html">Документація</a>
+		  <a class="mdl-navigation__link" href="lesson5.html">Створення репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson6.html">Налаштування репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson7.html">Додавання файлів</a>
+		  <a class="mdl-navigation__link" href="lesson8.html">Історія змін</a>
+		  <a class="mdl-navigation__link" href="lesson9.html">Скасування дій</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Тестування</span>
+          <a class="mdl-navigation__link" href="test1.html">Тест 1</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Інші формати уроків</span>
+          <a class="mdl-navigation__link" href="">Відео-версія</a>
+          <a class="mdl-navigation__link" href="">Аудіо-версія</a>
+        </nav>
+      </div>
+	  
+	<main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="intro" style="width: 100%;">
+							<div class="mdl-card__title">
+								<h2 class="mdl-card__title-text">Вступ</h2>
+							</div>
+					</div>
+					<div class="testing" style="display: none; width: 100%;">
+							<div class="mdl-card__title">
+								<h2 class="mdl-card__title-text"></h2>
+							</div>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<div class="intro">
+							<p>ВСТУПИТЕЛЬНОЕ СЛОВО О ТЕСТАХ</p>
+
+							<p>in ornare lorem nibh, in consequat eros sagittis vitae. Vestibulum fringilla at ante sit amet consequat. Praesent ut urna tortor. Aenean dignissim quam eget tincidunt tincidunt. Sed aliquet est ut metus pulvinar blandit eu eu magna. In nec scelerisque erat. Pellentesque pharetra viverra lorem ut dictum. Quisque mi urna, ultricies at lectus sit amet, laoreet vehicula nisi. In feugiat enim vel eros dictum, sed fermentum nisl dignissim. Mauris mattis, risus non faucibus commodo, eros metus commodo lectus, ac pellentesque leo sem a lorem. Maecenas condimentum pulvinar diam, vel tempor massa mattis vitae. Duis consectetur rhoncus diam, in venenatis lacus dictum ac. Aenean est magna, tristique vel malesuada sit amet, sodales aliquet diam. Sed vel sodales nisl. Mauris at elit sit amet eros convallis tincidunt et in tellus.</p>
+							
+							<center><button onclick="check(4)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+							  Почати
+							</button></center>
+						</div>
+						<div class="testing" style="display: none">
+								<div class="text-editor-wrap">
+									<div class="title-bar"><span class="title">bash</span></div>
+									<div class="text-body">
+										<div id="typed-strings" class="typed-strings0" style="display: none;">						  
+										  <p>ОТВЕТ</p>
+										</div>
+										<span field-white>$</span> 
+									<div class="mdl-textfield mdl-js-textfield" style="width: 90%">
+									<input class="mdl-textfield__input field-white" type="text" id="answ">
+									<label class="mdl-textfield__label field-white" for="sample1">Code...</label>
+								  </div>
+									</div>
+								</div>
+
+							<br><center>
+								<button onclick="check(5)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+								  З початку
+								</button>
+								<button onclick="check(1)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+								  Далі
+								</button>
+							</center>	
+						</div>
+						<dialog class="mdl-dialog">
+							<h4 class="mdl-dialog__title">Завершено!</h4>
+							<div class="mdl-dialog__content">
+							  <p>
+								Количество ваших правильных ответов: <span class="plus">kek</span>
+							  </p>
+							</div>
+							<div class="mdl-dialog__actions">
+							  <button type="button" class="mdl-button close">OK</button>
+							</div>
+						</dialog>
+					</div>	
+				</div>
+				<div class="mdl-layout-spacer"></div>	
+			</div>					
+		</div>
+	</main>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<script src="./material.min.js"></script>
+	
+	<script type="text/javascript">
+ 
+    var countQuest = 0;
+    var plus = 0;
+    var test_start = 0;
+	var dialog = document.querySelector('dialog');
+     
+    function check(num){
+		var questions = ["Это интересно, потому что теперь ваша ветка testing передвинулась вперёд, но ветка master всё ещё указывает на коммит, на котором вы были, когда выполняли <...>, чтобы переключить ветки. Давайте перейдём обратно на ветку master:",
+				"Давайте сделаем ещё один коммит:",
+				"Чтобы перейти на существующую ветку, вам надо выполнить команду"];
+				
+		var answers = ["1", "2", "3"]; 
+        if(num == 4){ 
+             
+			var intro = document.getElementsByClassName('intro');
+			var testing = document.getElementsByClassName('testing');
+			for (var i=0;i<intro.length; i++) {
+				intro[i].style.display='none';
+			}
+			for (var i=0;i<testing.length; i++) {
+				testing[i].style.display='block';
+			}
+						
+ 
+            if(test_start == 0){ //если тест токо начался (а я уже закончилась)
+				$('.testing .mdl-card__title .mdl-card__title-text').html(questions[countQuest]);			                 
+                test_start = 1;    
+            }			
+        }
+		else if (num == 1)
+		{
+			var user_answer = document.getElementById('answ').value;
+			console.log(user_answer);
+			if (user_answer != "")
+			{
+				countQuest++;
+				if (countQuest == questions.length)
+				{
+					
+					if (user_answer == answers[countQuest-1])
+					{
+						plus++;					
+					}			
+					if (! dialog.showModal) {
+					  dialogPolyfill.registerDialog(dialog);
+					}
+					  dialog.showModal();
+					  $('.plus').html(plus);
+					  dialog.querySelector('.close').addEventListener('click', function() {
+					  dialog.close();
+					});
+				}
+				else
+				{
+						if (user_answer == answers[countQuest-1])
+						{
+							plus++;					
+						}
+						
+						$('.testing .mdl-card__title .mdl-card__title-text').html(questions[countQuest]);
+						document.getElementById('answ').value = null;					
+				}
+			}
+		}
+        else{
+            
+			var intro = document.getElementsByClassName('intro');
+			var testing = document.getElementsByClassName('testing');
+			for (var i=0;i<intro.length; i++) {
+				intro[i].style.display='block';
+			}
+			for (var i=0;i<testing.length; i++) {
+				testing[i].style.display='none';
+				document.getElementById('answ').value = null;
+			}
+			plus = 0;
+			countQuest = 0;
+			test_start = 0;
+        }
+    }
+     
+</script>
+</body>
+</html>
+
+		
+		
+		

@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Git</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./material.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image demo-avatar" src="avatar-w.png">			
+          </span>
+          <div class="android-header-spacer mdl-layout-spacer"></div>  		  
+        </div>
+      </div>
+	  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color: #f44336">
+          <img class="android-logo-image demo-avatar" src="avatar-w.png">
+        </span>
+        <nav class="mdl-navigation">       
+          <a class="mdl-navigation__link" href="index.html">Вступ</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Уроки</span>
+          <a class="mdl-navigation__link" href="lesson1.html">Що таке Git?</a>
+          <a class="mdl-navigation__link" href="lesson2.html">Установка Git</a>
+          <a class="mdl-navigation__link" href="lesson3.html">Первинне налаштування Git</a>
+          <a class="mdl-navigation__link" href="lesson4.html">Документація</a>
+		  <a class="mdl-navigation__link" href="lesson5.html">Створення репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson6.html">Налаштування репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson7.html">Додавання файлів</a>
+		  <a class="mdl-navigation__link" href="lesson8.html">Історія змін</a>
+		  <a class="mdl-navigation__link" href="lesson9.html">Скасування дій</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Тестування</span>
+          <a class="mdl-navigation__link" href="test.html">Загальний тест знань</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Інші формати уроків</span>
+          <a class="mdl-navigation__link" href="audio.html">Відео-версія</a>
+          <a class="mdl-navigation__link" href="video.html">Аудіо-версія</a>
+        </nav>
+      </div>
+
+		<main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+			<div class="mdl-grid">
+				<!-- CONTENT -->
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid full-width">
+				  <div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">Налаштування репозиторію</h2>
+				  </div>
+					<div class="mdl-card__supporting-text">
+						<p>Перш за все, варто організувати створений репозиторій для комфортної роботи.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+			
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Опис проекту</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>Розпочнемо з текстового файлу, який описує проект: створюємо файл <code>README.md</code> за допомогою такої команди:</p>
+						
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings0" style="display: none;">						  
+									  <p>echo This is an example Python project for showcasing Git basics. >> README.md</p>
+									</div>
+									$ <span class="typed0" id="typed0"></span>
+								</div>
+							</div>
+						</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+				
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Ліцензія</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>Створивши стислий опис проекту, варто обрати для нього ліцензію, яка регулюватиме права та обов'язки користувачів. Для цього тестового проекту була обрана ліцензія Creative Commons 0 1.0 Universal, тому створимо відповідний файл <code>LICENSE.md</code> та заповнимо його текстом обраної ліцензії будь-яким зручним способом, наприклад, вручну скопіювавши текст обраної ліцензії.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+					
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Файлова структура проекту</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>Тепер створимо скелет проекту на Python. Це не входить в кроки налаштування Git-репозиторію, але створення правильної файлової структури проекту є гарною практикою. Для нашого тестового проекту на Python необхідна досить проста структура, створимо її:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings1" style="display: none;">						  
+									  <p>mkdir docs test pyhello</p>
+									  <p>$ touch docs/docfile.txt test/unneeded-test.py pyhello/pyhello.py</p>
+									</div>
+									$ <span class="typed1" id="typed1"></span>
+								</div>
+							</div>
+						</p>
+						<p>Директорія <code>docs</code> міститиме документацію до проекту, <code>test</code> — тести для розробленої програми, а <code>pyhello</code> — безпосередньо початкові коди тестового проекту.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+				
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Ігнорування небажаних файлів</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>У процесі розробки, зборки та тестування проектів можуть з'являтись файли, які необхідні лише локальному розробнику, але їх відстеження в репозиторії небажане, тому такі файли прийнято ігнорувати. Зазвичай це файли певних розширень, або з характерними назвами, тому їх зручно ігнорувати за допомогою регулярних виразів. В Git це реалізується за допомогою спеціального файлу <code>.gitignore</code>, що містить регулярні вирази для пошуку непотрібних файлів та директорій за їх назвами. Створимо файл <code>.gitignore</code> та заповнимо його необхідними даними з коментарями:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings2" style="display: none;">						  
+									  <p># Скомпільовані об'єкти</p>
+									  <p>__pychache__/ # тепер директорія __pychache__ повністю ігнорується</p>
+									  <p>*.py[cod] # ігнорувати файли з будь-яким ім'ям та розширеннями «pyc», «pyo» і «pyd»</p>
+									  <p></p>
+									  <p># Розширення мови C</p>
+									  <p>*.so # ігнорувати усі файли з розширенням «so»</p>
+									  <p></p>
+									  <p># Лог-файли інсталяторів</p>
+									  <p>pip-log.txt # ігнорувати тільки файл «pip-log.txt»</p>
+									  <p>pip-delete-this-directory.txt # ігнорувати тільки файл «pip-delete-this-directory.txt»</p>
+									  <p></p>
+									  <p># Документація Sphinx</p>
+									  <p>docs/_build/ # в директорії «build» ігнорувати субдиректорію «_build»</p>
+									  <p></p>
+									  <p># ...і так далі</p>
+									</div>
+									<span class="typed2" id="typed2"></span>
+								</div>
+							</div>
+						</p>
+						<p>Якщо ви не хочете, щоб Git відстежував будь-які файли, просто додайте їх назву або регулярний вираз, який знаходить небажаний клас файлів, до файлу <code>.gitignore</code>.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>	
+			
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Налаштування атрибутів</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>Система Git розрахована на роботу з файлами будь-яких типів, однак, найзручніше працювати саме з текстовими початковими файлами. Незважаючи на це, у процесі створення проекту може виникнути потреба зберігати двійкові та інші нетекстові файли у репозиторії з різних причин. Для запобігання небажаних змін у двійкових файлах зручно явно визначити тип файлу — двійковий або текстовий — за розширенням. Це реалізується за допомогою файлу <code>.gitattributes</code>, який містить вказівки для присвоєння атрибутів певним класам файлів.</p>
+						<p>Формат інструкції такий:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings3" style="display: none;">						  
+									  <p><регулярний вираз для пошуку файлу> <атрибути></p>
+									</div>
+									<span class="typed3" id="typed3"></span>
+								</div>
+							</div>
+						</p>
+						<p>Створимо та заповнимо файл <code>.gitattributes</code> за наведеним форматом з коментарями:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings4" style="display: none;">						  
+									  <p>*.gitattributes text # позначити файли з розширенням «gitattributes» як текстові</p>
+									  <p>.gitignore text # файл «.gitignore» — текстовий</p>
+									  <p>*.md text # усі файли з розширенням «md» — текстові</p>
+									  <p>*.txt text # усі файли з розширенням «txt» — текстові</p>
+									</div>
+									<span class="typed4" id="typed4"></span>
+								</div>
+							</div>
+						</p>
+						<p>Існує й багато інших кроків для підготовки Git-репозиторію, але вони виходять за рамки масштабу даного курсу.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+		</div>
+		</main>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script src="./material.min.js"></script>
+<script src="./typed.js"></script>
+
+<script>
+  
+  var count = 0;
+  var offset = 600;
+$('main').scroll(function(){
+  var scrolltop = $(this).scrollTop();
+  $('.typed'+count).each(function(){
+    if(scrolltop >= $(this).offset().top - offset) {	  
+	  var id = '.' + $(this).attr("id");
+	  console.log(count);
+	  var html = $('div.typed-strings'+count).html();
+	  var strings = [];
+	  var children = $('div.typed-strings'+count).children();
+	   $(children).each(function(index, item){  	
+		strings.push($(this)[0]['outerText']);
+		});  	 
+	  var str = [];
+	  str.push(strings.join('<br>'));	  
+	  var typed = new Typed(id, {
+		strings: str, 
+	    typeSpeed: 30
+	  });
+		count++;	
+    }
+  });
+});
+	
+	
+	/*var typed = new Typed('.typed', {
+		stringsElement: '#typed-strings', 
+	typeSpeed: 30
+	  });*/
+
+</script>
+</body>
+</html>

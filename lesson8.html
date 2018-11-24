@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Git</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./material.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image demo-avatar" src="avatar-w.png">			
+          </span>
+          <div class="android-header-spacer mdl-layout-spacer"></div>  		  
+        </div>
+      </div>
+	  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color: #f44336">
+          <img class="android-logo-image demo-avatar" src="avatar-w.png">
+        </span>
+        <nav class="mdl-navigation">       
+          <a class="mdl-navigation__link" href="index.html">Вступ</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Уроки</span>
+          <a class="mdl-navigation__link" href="lesson1.html">Що таке Git?</a>
+          <a class="mdl-navigation__link" href="lesson2.html">Установка Git</a>
+          <a class="mdl-navigation__link" href="lesson3.html">Первинне налаштування Git</a>
+          <a class="mdl-navigation__link" href="lesson4.html">Документація</a>
+		  <a class="mdl-navigation__link" href="lesson5.html">Створення репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson6.html">Налаштування репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson7.html">Додавання файлів</a>
+		  <a class="mdl-navigation__link" href="lesson8.html">Історія змін</a>
+		  <a class="mdl-navigation__link" href="lesson9.html">Скасування дій</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Тестування</span>
+          <a class="mdl-navigation__link" href="test.html">Загальний тест знань</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Інші формати уроків</span>
+          <a class="mdl-navigation__link" href="audio.html">Відео-версія</a>
+          <a class="mdl-navigation__link" href="video.html">Аудіо-версія</a>
+        </nav>
+      </div>
+
+	  
+
+		<main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+			<div class="mdl-grid">
+				<!-- CONTENT -->
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+				  <div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">Історія змін</h2>
+				  </div>
+					<div class="mdl-card__supporting-text">
+						<p>Як було сказано на початку, основною функцією системи контролю версій є зберігання та ведення історії внесених змін. На попередніх уроках ми вже внесли декілька, тому варто навчитись їх переглядати. Для перегляду історії змін (логу) у Git існує відповідна команда:</p>					
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings0" style="display: none;">						  
+									  <p>git log</p>
+									</div>
+									$ <span class="typed0" id="typed0"></span>
+								</div>
+							</div>
+						</p>
+						<p>Розглянемо вивід цієї команди. Як бачимо, вона виводить список збережених комітів з відповідними повними контрольними сумами, які унікально їх ідентифікують, повідомленнями, що супроводжують кожен коміт, а також такими деталями, як дані про автора та дату і час збереження коміту.</p>
+						<p></p>
+						<p>В залежності від бажаної деталізації виводу команди пропонуються різні параметри. Якщо користувач бажає побачити, які саме зміни були внесені в файли з кожним комітом, варто використовувати параметр <code>-p</code> або <code>--patch</code>. Також можна обмежити кількість комітів, зміни яких будуть виведені. Наприклад, щоб переглянути деталізацію змін в останніх двох комітах, виконуємо таку команду:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings1" style="display: none;">						  
+									  <p>git log -p -2</p>
+									  <p>(FIXME вывод)</p>
+									</div>
+									$ <span class="typed1" id="typed1"></span>
+								</div>
+							</div>
+						</p>
+						<p>Вивід команди <code>git log</code> можна гнучко налаштовувати за допомогою параметра <code>--pretty</code>. Наприклад, якщо необхідно переглянути стислу історію «в один рядок», можна скористатись командою:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings2" style="display: none;">						  
+									  <p>git log --pretty=oneline</p>
+									  <p>(FIXME OUTPUT)</p>
+									</div>
+									$ <span class="typed2" id="typed2"></span>
+								</div>
+							</div>
+						</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>											
+		</div>
+		</main>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script src="./material.min.js"></script>
+<script src="./typed.js"></script>
+
+<script>
+  
+  var count = 0;
+  var offset = 600;
+$('main').scroll(function(){
+  var scrolltop = $(this).scrollTop();
+  $('.typed'+count).each(function(){
+    if(scrolltop >= $(this).offset().top - offset) {	  
+	  var id = '.' + $(this).attr("id");
+	  console.log(count);
+	  var html = $('div.typed-strings'+count).html();
+	  var strings = [];
+	  var children = $('div.typed-strings'+count).children();
+	   $(children).each(function(index, item){  	
+		strings.push($(this)[0]['outerText']);
+		});  	 
+	  var str = [];
+	  str.push(strings.join('<br>'));	  
+	  var typed = new Typed(id, {
+		strings: str, 
+	    typeSpeed: 30
+	  });
+		count++;	
+    }
+  });
+});
+	
+	
+	/*var typed = new Typed('.typed', {
+		stringsElement: '#typed-strings', 
+	typeSpeed: 30
+	  });*/
+
+</script>
+</body>
+</html>

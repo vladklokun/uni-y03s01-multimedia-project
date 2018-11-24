@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Git</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./material.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image demo-avatar" src="avatar-w.png">			
+          </span>
+          <div class="android-header-spacer mdl-layout-spacer"></div>  		  
+        </div>
+      </div>
+	  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color: #f44336">
+          <img class="android-logo-image demo-avatar" src="avatar-w.png">
+        </span>
+        <nav class="mdl-navigation">       
+          <a class="mdl-navigation__link" href="index.html">Вступ</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Уроки</span>
+          <a class="mdl-navigation__link" href="lesson1.html">Що таке Git?</a>
+          <a class="mdl-navigation__link" href="lesson2.html">Установка Git</a>
+          <a class="mdl-navigation__link" href="lesson3.html">Первинне налаштування Git</a>
+          <a class="mdl-navigation__link" href="lesson4.html">Документація</a>
+		  <a class="mdl-navigation__link" href="lesson5.html">Створення репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson6.html">Налаштування репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson7.html">Додавання файлів</a>
+		  <a class="mdl-navigation__link" href="lesson8.html">Історія змін</a>
+		  <a class="mdl-navigation__link" href="lesson9.html">Скасування дій</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Тестування</span>
+          <a class="mdl-navigation__link" href="test.html">Загальний тест знань</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Інші формати уроків</span>
+          <a class="mdl-navigation__link" href="audio.html">Відео-версія</a>
+          <a class="mdl-navigation__link" href="video.html">Аудіо-версія</a>
+        </nav>
+      </div>
+
+		<main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+			<div class="mdl-grid">
+				<!-- CONTENT -->
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+				  <div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">Додавання файлів у Git</h2>
+				  </div>
+					<div class="mdl-card__supporting-text">
+					<p>Створивши директорію проекту, ініціалізувавши та налаштувавши Git-репозиторій, все готово до повноцінної роботи з системою контролю версій. На минулому уроці були створені різноманітні файли, однак Git ще за ними не слідкує, у репозиторії не зберігається жоден файл, і їх зміни не відстежуються — ми все ще маємо чистий проект. Щоб це виправити, необхідно додати файли у індексну область. Нагадаємо, що ми знаходимось в директорії проекту `pyhello`, яка містить усі файли проекту, тому додамо її повний зміст за допомогою команди:</p>					
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings0" style="display: none;">						  
+									  <p>git add .</p>
+									</div>
+									$ <span class="typed0" id="typed0"></span>
+								</div>
+							</div>
+						</p>
+						<p>У цій команді <code>.</code> означає поточну директорію.</p>
+						<p></p>
+						<p>В результаті виконання команди невідстежувані файли були представлені системі Git і тепер їх стан змінився з невідстежуваних до індексованих. Перевіримо статус файлів у директорії за допомогою команди:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings1" style="display: none;">						  
+									  <p>git status .</p>
+									</div>
+									$ <span class="typed1" id="typed1"></span>
+								</div>
+							</div>
+						</p>
+						<p>Як бачимо, з'явився цілий список файлів, які щойно були додані в індексовану область.</p>
+						<p></p>
+						<p>«Життєвий цикл» файлів зображений на рис.</p>
+						<p></p>
+						<p>Однак, поточна версія файлів ще не збережена. Для її збереження необхідно виконати «коміт» — тобто записати знімок версії файлів з області індексування в репозиторій. Кожен коміт повинен мати супроводжуюче повідомлення, яке характеризує внесені зміни. Оскільки ми тільки налаштували репозиторій та це буде наш перший коміт, текстом нашого повідомлення буде «Initial commit». Для виконання описаних дій виконуємо команду:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings2" style="display: none;">						  
+									  <p>git commit -m "Initial commit"</p>
+									</div>
+									$ <span class="typed2" id="typed2"></span>
+								</div>
+							</div>
+						</p>
+						<p>Після завершення виконання команди поточні версії файлів з індексованої області будуть збережені у Git-репозиторії.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Видалення файлів</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>У разі необхідності, якщо непотрібні файли були додані помилково або потреба у файлі зникла, його можна видалити. Наприклад, в директорії <code>test</code> знаходиться і відстежується файл <code>unneeded-test.py</code>, який нам більше не потрібен. Видалимо його:</p>
+						
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings3" style="display: none;">						  
+									  <p>git rm test/unneeded-test.py</p>
+									</div>
+									$ <span class="typed3" id="typed3"></span>
+								</div>
+							</div>
+						</p>
+						<p>Перевіримо статус репозиторію після завершення виконання команди:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings4" style="display: none;">						  
+									  <p>git status</p>
+									</div>
+									$ <span class="typed4" id="typed4"></span>
+								</div>
+							</div>
+						</p>
+						<p>Як бачимо, видалення файлу <code>unneeded-test.py</code> було додано в область індексації, але не збережено в репозиторій. Щоб підтвердити зміну, виконуємо коміт:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings5" style="display: none;">						  
+									  <p>git commit -m "Remove unneded unit test file 'unneeded-test.py'"</p>
+									</div>
+									$ <span class="typed5" id="typed5"></span>
+								</div>
+							</div>
+						</p>
+						<p>Тепер у поточній версії непотрібний файл видалений.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Перейменування та переміщення файлів</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>При створенні директорії проекту у директорії <code>docs</code> ми створили файл <code>docfile.txt</code>. Однак, згодом ми вирішили, що таке ім'я неінформативне, і кожен файли документації буде описувати по одній функції з початкового коду програми. Назва таких файлів буде відповідати назві функції. Враховуючи це все, ми вирішили перейменувати файл <code>docfile.txt</code> у <code>pyhello-main.txt</code>.</p>
+						<p></p>
+						<p>Для переміщення файлів Git надає функцію <code>mv</code> (move). Як і у Unix-подібних системах, перейменування файлів є переміщенням зі зміною імені файлу без зміни його шляху. Виконаємо бажану дію:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings6" style="display: none;">						  
+									  <p>git mv docs/docfile.txt docs/pyhello-main.txt</p>
+									  <p>$ git commit -m "Update docfile naming to reflect newly adopted 'one file -- one function' convention"</p>
+									</div>
+									$ <span class="typed6" id="typed6"></span>
+								</div>
+							</div>
+						</p>
+						<p>Після завершення виконання команд файл буде переіменований та збережений у репозиторії.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+		</div>
+		</main>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script src="./material.min.js"></script>
+<script src="./typed.js"></script>
+
+<script>
+  
+  var count = 0;
+  var offset = 600;
+$('main').scroll(function(){
+  var scrolltop = $(this).scrollTop();
+  $('.typed'+count).each(function(){
+    if(scrolltop >= $(this).offset().top - offset) {	  
+	  var id = '.' + $(this).attr("id");
+	  console.log(count);
+	  var html = $('div.typed-strings'+count).html();
+	  var strings = [];
+	  var children = $('div.typed-strings'+count).children();
+	   $(children).each(function(index, item){  	
+		strings.push($(this)[0]['outerText']);
+		});  	 
+	  var str = [];
+	  str.push(strings.join('<br>'));	  
+	  var typed = new Typed(id, {
+		strings: str, 
+	    typeSpeed: 30
+	  });
+		count++;	
+    }
+  });
+});
+	
+	
+	/*var typed = new Typed('.typed', {
+		stringsElement: '#typed-strings', 
+	typeSpeed: 30
+	  });*/
+
+</script>
+</body>
+</html>
