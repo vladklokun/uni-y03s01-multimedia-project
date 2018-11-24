@@ -104,6 +104,16 @@ p:last-child {
 }
 /* */
 
+html, body {
+	font-family: roboto, 'Roboto', sans-serif;
+	line-height: 1.5;
+}
+
+ul, ol {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
 .mdl-card__title {
 	width: 100%;
 	background-color: rgb(244,67,54);
