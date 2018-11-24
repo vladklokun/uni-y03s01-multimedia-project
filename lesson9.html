@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Git</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./material.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image demo-avatar" src="avatar-w.png">			
+          </span>
+          <div class="android-header-spacer mdl-layout-spacer"></div>  		  
+        </div>
+      </div>
+	  <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color: #f44336">
+          <img class="android-logo-image demo-avatar" src="avatar-w.png">
+        </span>
+        <nav class="mdl-navigation">       
+          <a class="mdl-navigation__link" href="index.html">Вступ</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Уроки</span>
+          <a class="mdl-navigation__link" href="lesson1.html">Що таке Git?</a>
+          <a class="mdl-navigation__link" href="lesson2.html">Установка Git</a>
+          <a class="mdl-navigation__link" href="lesson3.html">Первинне налаштування Git</a>
+          <a class="mdl-navigation__link" href="lesson4.html">Документація</a>
+		  <a class="mdl-navigation__link" href="lesson5.html">Створення репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson6.html">Налаштування репозиторію</a>
+		  <a class="mdl-navigation__link" href="lesson7.html">Додавання файлів</a>
+		  <a class="mdl-navigation__link" href="lesson8.html">Історія змін</a>
+		  <a class="mdl-navigation__link" href="lesson9.html">Скасування дій</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Тестування</span>
+          <a class="mdl-navigation__link" href="">Тест 1</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">Інші формати уроків</span>
+          <a class="mdl-navigation__link" href="">Відео-версія</a>
+          <a class="mdl-navigation__link" href="">Аудіо-версія</a>
+        </nav>
+      </div>
+
+		<main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+			<div class="mdl-grid">
+				<!-- CONTENT -->
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+				  <div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">Скасування дій</h2>
+				  </div>
+					<div class="mdl-card__supporting-text">
+					<p>Розробка та управління проектом — складна річ, тому у процесі роботи можуть виникати помилки: у коміт забули додати файл або додали зайвий, у супроводжуючому повідомленні допустили одрук тощо. Щоб не створювати безладу в історії комітів, Git надає декілька можливостей для скасування дій.</p>			
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>	
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+					<h3>Поправка комітів</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>Розглянемо перший з перерахованих випадків, коли розробник забув додати усі необхідні файли, але вже зробив коміт. Щоб це виправити, не створюючи новий коміт з текстом «Додав забутий файл», існує команда <code>amend</code>. Робота цієї команди полягає в тому, щоб «висунути» останній збережений коміт, не вилучаючи його змін, та замінити його новим, відредагованим.</p>
+						<p></p>
+						<p>Таким чином, додавання забутого файлу після коміту виглядатиме таким чином:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings0" style="display: none;">						  
+									  <p>git commit -m "Commit 1: add needed files"</p>
+									  <p>$ git add oops-i-forgot-this-one.py</p>
+									  <p>$ git commit --amend</p>
+									</div>
+									$ <span class="typed0" id="typed0"></span>
+								</div>
+							</div>
+						</p>
+						<p>В результаті виконання цих команд перший коміт буде вилучений, до його змін додасться файл <code>oops-i-forgot-this-one.py</code> і на його місці буде збережений новий, відредагований коміт.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+				
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+						<h3>Вилучення файлу з області індексації</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>Часто виникає ситуація, коли розробник вносить декілька логічно різних змін до різних частин проекту, які мають бути збережені у різних комітах, але випадково додає їх усі до області індексації. Наприклад, припустимо, що ми додали нову функцію в початковому коді, тобто змінили файл <code>pyhello.py</code>, написали тест для нової функції у файлі <code>test-new-function.py</code> та оновили опис проекту у файлі <code>README.md</code> відповідним чином. Звичайно, ми б хотіли логічно розподілити зміни у різних комітах, але ми помилково додали усі зміни в область індексації командою <code>git add *</code>.</p>
+						<p></p>
+						<p>Щоб це виправити, спочатку переконаємось, які файли були додані в область індексації:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings1" style="display: none;">						  
+									  <p>git status</p>
+									  <p>(FIXME OUTPUT)</p>
+									</div>
+									$ <span class="typed1" id="typed1"></span>
+								</div>
+							</div>
+						</p>
+
+						<p>Тепер, маючи список, обираємо файли, які необхідно вилучити з області індексації, та вилучаємо їх. Наприклад, спочатку ми хочемо зберегти зміни в початковому коді, тому в першому коміті зміни в файлах <code>test-new-function.py</code> та <code>README.md</code> нас не цікавлять. Виконуємо:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings2" style="display: none;">						  
+									  <p>git reset HEAD test/test-new-function.py README.md</p>
+									</div>
+									$ <span class="typed2" id="typed2"></span>
+								</div>
+							</div>
+						</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>	
+
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+					<div class="mdl-card__title">
+					<h3>Скасування змін у модифікованому файлі</h3>
+					</div>
+					
+					<div class="mdl-card__supporting-text">
+						<p>Іноді розробник не хоче зберегти зміни, внесені до файлу — виникає потреба повернути його до останнього збереженого стану. Git надає таку можливість за допомогою однієї з опцій <code>git checkout</code>.</p>
+						<p></p>
+						<p>Припустимо, що при розробці проекту ми працювали цілу ніч, і настільки стомились, що заплутались у коді нової функції, яку намагались дописати у файлі <code>pyhello.py</code>. Зрозумівши ступінь своєї втоми, ми бажаємо продовжити роботу наступного дня з чистого листа. Для цього нам необхідно повернути файл <code>pyhello.py</code> до останнього збереженого стану. Спочатку переглянемо статус репозиторію:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings3" style="display: none;">						  
+									  <p>git status</p>
+									  <p>(FIXME output)</p>
+									</div>
+									$ <span class="typed3" id="typed3"></span>
+								</div>
+							</div>
+						</p>
+						<p>Git бачить, що файл <code>pyhello.py</code> був модифікований. Однак, ми не бажаємо зберігати зміни, а, навпаки, хочемо їх позбавитись, тому скористаємось наданими інструкціями:</p>
+						<p>
+							<div class="text-editor-wrap">
+								<div class="title-bar"><span class="title">bash</span></div>
+								<div class="text-body">
+									<div id="typed-strings" class="typed-strings4" style="display: none;">						  
+									  <p>git checkout -- pyhello/pyhello.py</p>
+									</div>
+									$ <span class="typed4" id="typed4"></span>
+								</div>
+							</div>
+						</p>
+						<p><b>Увага!</b> Команда <code>git checkout --</code> дуже небезпечна, оскільки вона видаляє незбережені зміни у локальній директорії. Лише уявіть ступінь свого розпачу, якщо видалите правильний код функції, над яким ви працювали цілий робочий день! Тому будьте надзвичайно обережні при використанні функції <code>git checkout -- </code>.</p>
+					</div>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+		</div>
+		</main>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script src="./material.min.js"></script>
+<script src="./typed.js"></script>
+
+<script>
+  
+  var count = 0;
+  var offset = 600;
+$('main').scroll(function(){
+  var scrolltop = $(this).scrollTop();
+  $('.typed'+count).each(function(){
+    if(scrolltop >= $(this).offset().top - offset) {	  
+	  var id = '.' + $(this).attr("id");
+	  console.log(count);
+	  var html = $('div.typed-strings'+count).html();
+	  var strings = [];
+	  var children = $('div.typed-strings'+count).children();
+	   $(children).each(function(index, item){  	
+		strings.push($(this)[0]['outerText']);
+		});  	 
+	  var str = [];
+	  str.push(strings.join('<br>'));	  
+	  var typed = new Typed(id, {
+		strings: str, 
+	    typeSpeed: 30
+	  });
+		count++;	
+    }
+  });
+});
+	
+	
+	/*var typed = new Typed('.typed', {
+		stringsElement: '#typed-strings', 
+	typeSpeed: 30
+	  });*/
+
+</script>
+</body>
+</html>
