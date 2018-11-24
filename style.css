@@ -12,11 +12,22 @@
     min-width: 693.33px;
 }
 
+/* hyperlinks */
+a {
+	font-family: 'Roboto Mono', monospace;
+}
+
+/* font sizes adaptive to browser preferences, used to figure out 1rem value*/
+html, body {
+	font-size: 100%;
+}
+
 p
 {
-	font-family:"Roboto";
+	font-size: 1rem;
+	font-family:"Roboto", sans-serif;
 	font-weight: 400;
-    line-height: 28px;
+    line-height: 1.5;
 }
 
 .demo-content {
@@ -85,10 +96,12 @@ p
 
 code
 {
-	background-color: black;
-    color: white;
+	/* changed bgcolor to match terminal */
+	/* background-color: rgba(0, 0, 0, 0.85); */
+	color: rgb(32, 33, 36);
+    /* color: white; */
     /* height: 110px; */
-    padding: 5px;
+    /* changed padding to use less line-height */
     /* width: 115px; */
     /* height: 220px; */
 	font-family: 'Roboto Mono', monospace;
@@ -134,8 +147,10 @@ code
     color: #f0f0f0;
     text-shadow: #000 0px 1px 0px;
 	font-family: 'Roboto Mono', monospace;
-    font-size: 1.45em;
-    line-height: 1.40em;
+	/* changed font-size to 1rem */
+    font-size: 1rem;
+	/* changed line-height to 1.5 */
+    line-height: 1.5;
     font-weight: 500;
     text-align: left;
     overflow: hidden;
