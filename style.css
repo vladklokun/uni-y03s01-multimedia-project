@@ -83,16 +83,39 @@
 }
 /* End Material Icons definition */
 
-.mdl-card__title
-{
-	width: 100%;
-    background-color: rgb(244,67,54);
-	color: white;
+/* Begin style rules */
+
+/* remove spacing after last paragraph */
+p:last-child {
+	margin-bottom: 0;
 }
-.mdl-card.mdl-shadow--4dp.mdl-cell.mdl-cell--8-col.mdl-grid
-{
+/* */
+
+/* consistent padding inside card's supporting text */
+.mdl-card__supporting-text {
+	padding: 1.5rem;
+}
+/* */
+
+/* grid spacing equal to line height */
+.mdl-grid {
+	/* half of line height */
+	padding: 0.75rem;
+}
+/* */
+
+.mdl-card__title {
+	width: 100%;
+	background-color: rgb(244,67,54);
+	color: white;
+	/* padding proportional to line height, assuming line height is 1.5 */
+	padding: 1.5rem;
+}
+
+.mdl-card.mdl-shadow--4dp.mdl-cell.mdl-cell--8-col.mdl-grid {
 	padding: 0;	
 }
+
 .full-width {
     min-width: 693.33px;
 }
@@ -107,12 +130,14 @@ html, body {
 	font-size: 100%;
 }
 
-p
-{
+p {
 	font-size: 1rem;
 	font-family: roboto, 'Roboto', sans-serif;
 	font-weight: 400;
-    line-height: 1.5;
+	line-height: 1.5;
+	/* bottom margin equal to line height */
+	margin-bottom: 1.5rem;
+    
 }
 
 .demo-content {
