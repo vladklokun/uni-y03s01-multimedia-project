@@ -1,3 +1,88 @@
+/* Begin Roboto definition */
+@font-face {
+	font-family: roboto;
+	src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+	font-weight: regular;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: roboto;
+	src: url('./fonts/Roboto-Italic.ttf') format('truetype');
+	font-weight: regular;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: roboto;
+	src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: roboto;
+	src: url('./fonts/Roboto-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: roboto;
+	src: url('./fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: roboto;
+	src: url('./fonts/Roboto-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+/* End Roboto definition */
+
+/* Begin RobotoMono Mono definition */
+@font-face {
+	font-family: roboto-mono;
+	src: url('./fonts/RobotoMono-Regular.ttf') format('truetype');
+	font-weight: regular;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: roboto-mono;
+	src: url('./fonts/RobotoMono-Italic.ttf') format('truetype');
+	font-weight: regular;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: roboto-mono;
+	src: url('./fonts/RobotoMono-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: roboto-mono;
+	src: url('./fonts/RobotoMono-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+/* End RobotoMono Mono definition */
+
+/* Begin Material Icons definition */
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url('./fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+/* End Material Icons definition */
+
 .mdl-card__title
 {
 	width: 100%;
@@ -14,7 +99,7 @@
 
 /* hyperlinks */
 a {
-	font-family: 'Roboto Mono', monospace;
+	font-family: roboto-mono,'Roboto Mono', monospace;
 }
 
 /* font sizes adaptive to browser preferences, used to figure out 1rem value*/
@@ -25,7 +110,7 @@ html, body {
 p
 {
 	font-size: 1rem;
-	font-family:"Roboto", sans-serif;
+	font-family: roboto, 'Roboto', sans-serif;
 	font-weight: 400;
     line-height: 1.5;
 }
@@ -104,7 +189,7 @@ code
     /* changed padding to use less line-height */
     /* width: 115px; */
     /* height: 220px; */
-	font-family: 'Roboto Mono', monospace;
+	font-family: roboto-mono, monospace;
 }
 
 .text-editor-wrap {
@@ -146,7 +231,7 @@ code
     padding: 10px;
     color: #f0f0f0;
     text-shadow: #000 0px 1px 0px;
-	font-family: 'Roboto Mono', monospace;
+	font-family: roboto-mono, 'Roboto Mono', monospace;
 	/* changed font-size to 1rem */
     font-size: 1rem;
 	/* changed line-height to 1.5 */
