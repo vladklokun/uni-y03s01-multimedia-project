@@ -127,6 +127,28 @@ li:last-child {
 }
 /* */
 
+/* change Floating Action Buttons color */
+.mdl-button--fab.mdl-button--colored {
+	background: rgb(244, 67, 54);
+}
+/* */
+
+/* add custom divs for arrow-back and arrow-forward */
+.arrow-back {
+	position: fixed;
+	top: 50%;
+	left: 1%;
+	z-index: 9999;
+}
+
+.arrow-forward {
+	position: fixed;
+	top: 50%;
+	right: 1%;
+	z-index: 9999;
+}
+/* */
+
 .mdl-card__title {
 	width: 100%;
 	background-color: rgb(244,67,54);
