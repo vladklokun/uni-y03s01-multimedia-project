@@ -76,6 +76,21 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 					<h3 class="mdl-card__title-text">Linux</h3>
+					<button class="mdl-button music" id="show-dialog" type="button">
+						<i class="material-icons" style="color: white">video_library</i>
+					</button>
+					  <dialog class="mdl-dialog" style="width: 60%; height: 60%">
+						<div class="mdl-dialog__content">
+						  <p>
+							<iframe width="auto" height="342px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+							</iframe>
+						  </p>
+						</div>
+						<div class="mdl-dialog__actions">
+						  <button type="button" class="mdl-button close">Закрити</button>
+						</div>
+					  </dialog>
+					</div>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -247,5 +262,19 @@ $('main').scroll(function(){
 	  });*/
 
 </script>
+
+<script>
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
 </body>
 </html>
