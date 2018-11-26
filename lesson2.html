@@ -76,13 +76,13 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 					<h3>Linux</h3>
-					<button class="mdl-button music" id="show-dialog" type="button">
+					<button class="mdl-button music show-dialog" type="button" onclick="show(1)">
 						<i class="material-icons" style="color: white">video_library</i>
 					</button>
 					  <dialog class="mdl-dialog" style="width: 60%; height: 60%">
 						<div class="mdl-dialog__content">
 						  <p>
-							<iframe width="auto" height="342px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+							<iframe class="video" width="auto" height="342px" src="">
 							</iframe>
 						  </p>
 						</div>
@@ -130,6 +130,9 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">macOS</h3>
+						<button class="mdl-button music show-dialog" type="button" onclick="show(2)">
+							<i class="material-icons" style="color: white">video_library</i>
+						</button>					  
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -184,6 +187,9 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Перевірка установки</h3>
+						<button class="mdl-button music show-dialog" type="button" onclick="show(3)">
+							<i class="material-icons" style="color: white">video_library</i>
+						</button>
 					</div>
 				
 					<div class="mdl-card__supporting-text">
@@ -263,9 +269,20 @@ $('main').scroll(function(){
 </script>
 
 <script>
-    var dialog = document.querySelector('dialog');
+	$('.show-dialog').bind('click', function(){
+		var dialog = document.querySelector('dialog');
+		if (! dialog.showModal) {
+		  dialogPolyfill.registerDialog(dialog);
+		}
+		dialog.showModal();
+		dialog.querySelector('.close').addEventListener('click', function() {
+		dialog.close();
+		});	
+	});
+	
+	/*var dialog = document.querySelector('dialog');
     var showDialogButton = document.querySelector('#show-dialog');
-    if (! dialog.showModal) {
+	if (! dialog.showModal) {
       dialogPolyfill.registerDialog(dialog);
     }
     showDialogButton.addEventListener('click', function() {
@@ -273,7 +290,33 @@ $('main').scroll(function(){
     });
     dialog.querySelector('.close').addEventListener('click', function() {
       dialog.close();
-    });
+    });*/
+function show(x)
+{	
+	switch(x) {
+		case 1:  
+			$(".video").attr('src', "https://www.youtube.com/embed/tgbNymZ7vqY");	
+			console.log(x);
+			console.log($(".video"));
+		break;
+
+		case 2:  
+			$(".video").attr('src', "https://www.youtube.com/embed/yXPB90A-aZo");
+			console.log(x);
+			console.log($(".video"));
+		break;
+		
+		case 3:  
+			$(".video").attr('src', "https://www.youtube.com/embed/UwxatzcYf9Q");
+			console.log(x);
+			console.log($(".video"));
+		break;
+
+		default:
+			$(".video").attr('src', "https://www.youtube.com/embed/UwxatzcYf9Q");
+		break;
+	}
+}
   </script>
 </body>
 </html>
