@@ -85,6 +85,15 @@
 
 /* Begin style rules */
 
+img.figure {
+	margin-bottom: 0.6rem;
+}
+
+.figure-caption {
+	margin-bottom: 1.4rem;
+	font-style: italic;
+}
+
 /* remove spacing after last paragraph */
 p:last-child {
 	margin-bottom: 0;
