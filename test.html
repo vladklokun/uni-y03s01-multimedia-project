@@ -52,7 +52,7 @@
         <div class="mdl-grid demo-content">
 			<div class="mdl-grid">
 				<div class="mdl-layout-spacer"></div>
-				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
+				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid full-width">
 					<div class="intro" style="width: 100%;">
 							<div class="mdl-card__title">
 								<h2 class="mdl-card__title-text">Вступ</h2>
@@ -73,6 +73,10 @@
 							<center><button onclick="check(4)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
 							  Почати
 							</button></center>
+						</div>
+						<div class="questions" style="display: none;">
+							<p></p>
+							<br>
 						</div>
 						<div class="testing" style="display: none">
 								<div class="text-editor-wrap">
@@ -119,7 +123,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 	<script src="./material.min.js"></script>
 	
-	<script type="text/javascript">
+<script type="text/javascript">
  
     var countQuest = 0;
     var plus = 0;
@@ -131,7 +135,8 @@
 				"Давайте сделаем ещё один коммит:",
 				"Чтобы перейти на существующую ветку, вам надо выполнить команду"];
 				
-		var answers = ["1", "2", "3"]; 
+		var answers = ["1", "2", "3"];
+		var headers = ["h1", "h2", "h3"]; 
         if(num == 4){ 
              
 			var intro = document.getElementsByClassName('intro');
@@ -142,10 +147,11 @@
 			for (var i=0;i<testing.length; i++) {
 				testing[i].style.display='block';
 			}
-						
+			$(".questions")[0].style.display='block';				
  
             if(test_start == 0){ //если тест токо начался (а я уже закончилась)
-				$('.testing .mdl-card__title .mdl-card__title-text').html(questions[countQuest]);			                 
+				$('.testing .mdl-card__title .mdl-card__title-text').html(headers[countQuest]);
+				$('.questions p').html(questions[countQuest]);	
                 test_start = 1;    
             }			
         }
@@ -179,7 +185,8 @@
 							plus++;					
 						}
 						
-						$('.testing .mdl-card__title .mdl-card__title-text').html(questions[countQuest]);
+						$('.questions p').html(questions[countQuest]);
+						$('.testing .mdl-card__title .mdl-card__title-text').html(headers[countQuest]);
 						document.getElementById('answ').value = null;					
 				}
 			}
@@ -188,6 +195,7 @@
             
 			var intro = document.getElementsByClassName('intro');
 			var testing = document.getElementsByClassName('testing');
+			$(".questions")[0].style.display='none';	
 			for (var i=0;i<intro.length; i++) {
 				intro[i].style.display='block';
 			}
