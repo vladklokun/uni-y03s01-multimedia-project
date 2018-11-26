@@ -1,3 +1,25 @@
+.music
+{
+	
+}
+
+.arrow-back
+{
+	background-color: #f44336!important;
+    text-align: right;
+    position: fixed;
+    margin-left: 150px;
+    z-index: 1000;
+}
+.arrow_forward
+{
+	background-color: #f44336!important;
+    text-align: right;
+    position: fixed;
+    margin-left: 870px;
+    z-index: 1000;
+}
+
 .mdl-card__title
 {
 	width: 100%;
