@@ -143,6 +143,15 @@ li:last-child {
     min-width: 693.33px;
 }
 
+.mdl-textfield__input {
+  font-family: roboto-mono, monospace;
+}
+
+.mdl-textfield__label {
+  font-family: roboto-mono, monospace;
+  color: #f0f0f0;
+}
+
 /* hyperlinks */
 a {
 	font-family: roboto-mono,'Roboto Mono', monospace;
