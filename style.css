@@ -149,6 +149,13 @@ li:last-child {
 }
 /* */
 
+/* card audio button */
+.mdl-button.music {
+	line-height: 100%;
+	height: 100%;
+}
+/* */
+
 .mdl-card__title {
 	width: 100%;
 	background-color: rgb(244,67,54);
