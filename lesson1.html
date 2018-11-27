@@ -63,6 +63,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 				  <div class="mdl-card__title">
 					<h2 class="mdl-card__title-text">Що таке Git?</h2>
+					<button class="mdl-button music" onclick="play(event)" id="audio1">
+							<i class="material-icons" style="color: white" id="audio1">volume_up</i>
+						</button>
+						<audio id="a-audio1" src="audio/lesson-01-card-01.ogg"></audio>
 				  </div>
 					<div class="mdl-card__supporting-text">
 						<p>Git — це розподілена система контролю версій, яку розробив Лінус Торвальдс, коли працював над ядром Linux, бо був незадоволений існуючими системами контролю версій. На момент розробки цього курсу за даними многочислених опитувань (наприклад, StackOverflow Developer Survey) саме Git є найпопулярнішою системою контролю версій.</p>
@@ -76,6 +80,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">		
 						<h3 class="mdl-card__title-text">Як Git зберігає дані?</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio2">
+							<i class="material-icons" style="color: white" id="audio2">volume_up</i>
+						</button>
+						<audio id="a-audio2" src="audio/lesson-01-card-02.ogg"></audio>
 					</div>
 					<div class="mdl-card__supporting-text">	
 						<p>На відміну від інших систем контролю версій, Git зберігає не зміни, внесені до контрольованих файлів, а повні «знімки» версій цих файлів, ніби файлова система. Такий підхід впливає на багато інших аспектів роботи програми, тому бути зустрічатись у наступних уроках.</p>
@@ -89,6 +97,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Майже усі операції локальні</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio3">
+							<i class="material-icons" style="color: white" id="audio3">volume_up</i>
+						</button>
+						<audio id="a-audio3" src="audio/lesson-01-card-03.ogg"></audio>
 					</div>
 					<div class="mdl-card__supporting-text">		
 						<p>Більшості операцій у Git для роботи потрібні лише локальні файли та ресурси, тому зникає залежність від третіх сторін. В результаті зростає загальна швидкість виконання операцій, оскільки вони виконуються лише на локальній машині і залежать виключно від неї. Також з'являється можливість роботи, внесення та збереження змін у локальному репозиторії без обмежень, незалежно від того, чи підключений користувач до мережі.</p>
@@ -102,6 +114,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">		
 						<h3 class="mdl-card__title-text">Git перевіряє цілісність</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio4">
+							<i class="material-icons" style="color: white" id="audio4">volume_up</i>
+						</button>
+						<audio id="a-audio4" src="audio/lesson-01-card-04.ogg"></audio>
 					</div>
 					<div class="mdl-card__supporting-text">		
 						<p>Цілісність даних є невід'ємною частиною Git, тому перевірка даних на цілісність вбудована на найнижчих рівнях. Перед зберіганням у репозиторії, Git обчислює контрольну суму об'єкта та використовує її як ідентифікатор. Завдяки цьому неможливо змінити вміст будь-якого відстежуваного файлу або директорії так, щоб Git цього не помітив, що дозволяє виявляти пошкодження файлів при зберіганні та передачі.</p>
@@ -115,6 +131,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Git зазвичай лише додає дані</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio5">
+							<i class="material-icons" style="color: white" id="audio5">volume_up</i>
+						</button>
+						<audio id="a-audio5" src="audio/lesson-01-card-05.ogg"></audio>
 					</div>
 					<div class="mdl-card__supporting-text">		
 						<p>Майже усі дії з Git лише додають дані до бази (репозиторію), тому дуже важко стерти відстежувані дані або зробити щось, що не можна відмінити. Це стосується лише відстежуваних даних, які були додані до репозиторія операцією `commit`, і модифіковані дані, які не відстежуються, легко можуть бути втрачені, як і у інших системах контролю версій. Однак, після того як дані були додані у репозиторій, їх дуже важко втратити, особливо якщо користувач регулярно зберігає базу даних в іншому репозиторії.</p>
@@ -128,6 +148,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Три стани</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio6">
+							<i class="material-icons" style="color: white" id="audio6">volume_up</i>
+						</button>
+						<audio id="a-audio6" src="audio/lesson-01-card-06.ogg"></audio>
 					</div>
 					<div class="mdl-card__supporting-text">		
 						<p>Основним поняттям для ясного розуміння процесу роботи Git є три основні стани, в яких можуть знаходитись файли:
@@ -155,5 +179,24 @@
 
 	
 <script src="./material.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+<script>
+	function play(event)
+	{
+		var targ_but = "a-" + $(event.target)[0]['id'];
+		var x = document.getElementById(targ_but); 
+		if($(x)[0]['paused'] == false)
+		{
+			$(x).trigger('pause');
+		}
+		else
+		{
+			$('audio').each(function(){
+			this.pause(); 
+			}); 
+			$(x).trigger('play');
+		}		
+	}
+</script>
 </body>
 </html>

@@ -63,6 +63,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 				  <div class="mdl-card__title">
 					<h2 class="mdl-card__title-text">Первинне налаштування Git</h2>
+					<button class="mdl-button music" onclick="play(event)" id="audio1">
+							<i class="material-icons" style="color: white" id="audio1">volume_up</i>
+						</button>
+						<audio id="a-audio1" src="audio/lesson-03-card-01.ogg"></audio>
 				  </div>
 					<div class="mdl-card__supporting-text">
 					<p>Перед використанням Git його необхідно налаштувати. Для&nbsp;налаштування Git комплектується утилітою&nbsp;<code>git config</code>. В&nbsp;ієрархії конфігурацій є&nbsp;3&nbsp;рівні у&nbsp;порядку спадання пріорітету:
@@ -79,6 +83,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 					<h3 class="mdl-card__title-text">Ваша особа</h3>
+					<button class="mdl-button music" onclick="play(event)" id="audio2">
+							<i class="material-icons" style="color: white" id="audio2">volume_up</i>
+						</button>
+						<audio id="a-audio2" src="audio/lesson-03-card-02.ogg"></audio>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -108,6 +116,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Текстовий редактор</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio3">
+							<i class="material-icons" style="color: white" id="audio3">volume_up</i>
+						</button>
+						<audio id="a-audio3" src="audio/lesson-03-card-03.ogg"></audio>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -148,6 +160,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid full-width">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Перевірка налаштувань</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio4">
+							<i class="material-icons" style="color: white" id="audio4">volume_up</i>
+						</button>
+						<audio id="a-audio4" src="audio/lesson-03-card-04.ogg"></audio>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -202,13 +218,27 @@ $('main').scroll(function(){
     }
   });
 });
-	
-	
-	/*var typed = new Typed('.typed', {
-		stringsElement: '#typed-strings', 
-	typeSpeed: 30
-	  });*/
 
+
+</script>
+
+  <script>
+	function play(event)
+	{
+		var targ_but = "a-" + $(event.target)[0]['id'];
+		var x = document.getElementById(targ_but); 
+		if($(x)[0]['paused'] == false)
+		{
+			$(x).trigger('pause');
+		}
+		else
+		{
+			$('audio').each(function(){
+			this.pause(); 
+			}); 
+			$(x).trigger('play');
+		}		
+	}
 </script>
 </body>
 </html>
