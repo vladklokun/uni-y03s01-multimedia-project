@@ -81,6 +81,18 @@
 							<i class="material-icons" style="color: white" id="audio2">volume_up</i>
 						</button>
 						<audio id="a-audio2" src="audio/lesson-06-сard-02.ogg"></audio>
+					<button class="mdl-button music show-dialog" type="button" onclick="show(1)">
+						<i class="material-icons" style="color: white">video_library</i>
+					</button>
+					  <dialog class="mdl-dialog">
+						<div class="mdl-dialog__content">
+							<video class="video" controls src="">
+							</video>
+						</div>
+						<div class="mdl-dialog__actions">
+						  <button type="button" class="mdl-button close">Закрити</button>
+						</div>
+					  </dialog>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -129,6 +141,18 @@
 							<i class="material-icons" style="color: white" id="audio4">volume_up</i>
 						</button>
 						<audio id="a-audio4" src="audio/lesson-06-сard-04.ogg"></audio>
+					<button class="mdl-button music show-dialog" type="button" onclick="show(3)">
+						<i class="material-icons" style="color: white">video_library</i>
+					</button>
+					  <dialog class="mdl-dialog">
+						<div class="mdl-dialog__content">
+							<video class="video" controls src="">
+							</video>
+						</div>
+						<div class="mdl-dialog__actions">
+						  <button type="button" class="mdl-button close">Закрити</button>
+						</div>
+					  </dialog>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -247,6 +271,37 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 <script src="./material.min.js"></script>
 <script src="./typed.js"></script>
+
+<script>
+	$('.show-dialog').bind('click', function(){
+		var dialog = document.querySelector('dialog');
+		if (! dialog.showModal) {
+		  dialogPolyfill.registerDialog(dialog);
+		}
+		dialog.showModal();
+		dialog.querySelector('.close').addEventListener('click', function() {
+		dialog.close();
+		});	
+	});
+function show(x)
+{	
+	switch(x) {
+		case 1:  
+			$(".video").attr('src', "video/lesson-06-card-01.mkv");	
+			console.log(x);
+			console.log($(".video"));
+		break;
+		case 3:  
+			$(".video").attr('src', "video/lesson-06-card-03.mkv");	
+			console.log(x);
+			console.log($(".video"));
+		break;
+		default:
+			$(".video").attr('src', "video/lesson-06-card-01.mkv");	
+		break;
+	}
+}
+  </script>
 
 <script>
   

@@ -82,20 +82,6 @@
 							<i class="material-icons" style="color: white" id="audio2">volume_up</i>
 						</button>
 						<audio id="a-audio2" src="audio/lesson-02-card-02.ogg"></audio>
-					<button class="mdl-button music show-dialog" type="button" onclick="show(1)">
-						<i class="material-icons" style="color: white">video_library</i>
-					</button>
-					  <dialog class="mdl-dialog" style="width: 60%; height: 60%">
-						<div class="mdl-dialog__content">
-						  <p>
-							<iframe class="video" width="auto" height="342px" src="">
-							</iframe>
-						  </p>
-						</div>
-						<div class="mdl-dialog__actions">
-						  <button type="button" class="mdl-button close">Закрити</button>
-						</div>
-					  </dialog>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -140,9 +126,6 @@
 							<i class="material-icons" style="color: white" id="audio3">volume_up</i>
 						</button>
 						<audio id="a-audio3" src="audio/lesson-02-card-03.ogg"></audio>
-						<button class="mdl-button music show-dialog" type="button" onclick="show(2)">
-							<i class="material-icons" style="color: white">video_library</i>
-						</button>					  
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -201,9 +184,22 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Перевірка установки</h3>
-						<button class="mdl-button music show-dialog" type="button" onclick="show(3)">
-							<i class="material-icons" style="color: white">video_library</i>
+						<button class="mdl-button music" onclick="play(event)" id="audio5">
+							<i class="material-icons" style="color: white" id="audio5">volume_up</i>
 						</button>
+						<audio id="a-audio5" src="audio/lesson-02-card-05.ogg"></audio>
+					<button class="mdl-button music show-dialog" type="button" onclick="show(1)">
+						<i class="material-icons" style="color: white">video_library</i>
+					</button>
+					  <dialog class="mdl-dialog">
+						<div class="mdl-dialog__content">
+							<video class="video" controls src="">
+							</video>
+						</div>
+						<div class="mdl-dialog__actions">
+						  <button type="button" class="mdl-button close">Закрити</button>
+						</div>
+					  </dialog>
 					</div>
 				
 					<div class="mdl-card__supporting-text">
@@ -297,7 +293,7 @@ function show(x)
 {	
 	switch(x) {
 		case 1:  
-			$(".video").attr('src', "https://www.youtube.com/embed/tgbNymZ7vqY");	
+			$(".video").attr('src', "video/lesson-02-card-05.mkv");	
 			console.log(x);
 			console.log($(".video"));
 		break;
