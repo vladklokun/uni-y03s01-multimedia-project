@@ -64,6 +64,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 				  <div class="mdl-card__title">
 					<h2 class="mdl-card__title-text">Історія змін</h2>
+					<button class="mdl-button music" onclick="play(event)" id="audio1">
+							<i class="material-icons" style="color: white" id="audio1">volume_up</i>
+						</button>
+						<audio id="a-audio1" src="audio/lesson-08-сard-01.ogg"></audio>
 				  </div>
 					<div class="mdl-card__supporting-text">
 						<p>Як було сказано на початку, основною функцією системи контролю версій є зберігання та ведення історії внесених змін. На попередніх уроках ми вже внесли декілька, тому варто навчитись їх переглядати. Для перегляду історії змін (логу) у Git існує відповідна команда:</p>					
@@ -144,13 +148,25 @@ $('main').scroll(function(){
     }
   });
 });
-	
-	
-	/*var typed = new Typed('.typed', {
-		stringsElement: '#typed-strings', 
-	typeSpeed: 30
-	  });*/
+</script>
 
+<script>
+	function play(event)
+	{
+		var targ_but = "a-" + $(event.target)[0]['id'];
+		var x = document.getElementById(targ_but); 
+		if($(x)[0]['paused'] == false)
+		{
+			$(x).trigger('pause');
+		}
+		else
+		{
+			$('audio').each(function(){
+			this.pause(); 
+			}); 
+			$(x).trigger('play');
+		}		
+	}
 </script>
 </body>
 </html>

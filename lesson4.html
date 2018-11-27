@@ -64,6 +64,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 				  <div class="mdl-card__title">
 					<h2 class="mdl-card__title-text">Документація</h2>
+					<button class="mdl-button music" onclick="play(event)" id="audio1">
+							<i class="material-icons" style="color: white" id="audio1">volume_up</i>
+						</button>
+						<audio id="a-audio1" src="audio/lesson-04-card-01.ogg"></audio>
 				  </div>
 					<div class="mdl-card__supporting-text">
 						<p>Git — надзвичайно гнучка система з величезною кількістю функцій і можливістю детального налаштування, тому для покращення розуміння цих функцій користувачу надається документація. Цю функцію виконує утиліта <code>git-help</code>, яка надає детальну інформацію з використання будь-якої команди, вбудованої в Git. Вона використовується так:</p>					
@@ -138,13 +142,25 @@ $( document ).ready(function(){
 		count++;	
     }
   });
-	
-	
-	/*var typed = new Typed('.typed', {
-		stringsElement: '#typed-strings', 
-	typeSpeed: 30
-	  });*/
+</script>
 
+<script>
+	function play(event)
+	{
+		var targ_but = "a-" + $(event.target)[0]['id'];
+		var x = document.getElementById(targ_but); 
+		if($(x)[0]['paused'] == false)
+		{
+			$(x).trigger('pause');
+		}
+		else
+		{
+			$('audio').each(function(){
+			this.pause(); 
+			}); 
+			$(x).trigger('play');
+		}		
+	}
 </script>
 </body>
 </html>

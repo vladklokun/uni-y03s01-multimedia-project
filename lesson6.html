@@ -62,6 +62,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid full-width">
 				  <div class="mdl-card__title">
 					<h2 class="mdl-card__title-text">Налаштування репозиторію</h2>
+					<button class="mdl-button music" onclick="play(event)" id="audio1">
+							<i class="material-icons" style="color: white" id="audio1">volume_up</i>
+						</button>
+						<audio id="a-audio1" src="audio/lesson-06-сard-01.ogg"></audio>
 				  </div>
 					<div class="mdl-card__supporting-text">
 						<p>Перш за все, варто організувати створений репозиторій для комфортної роботи.</p>
@@ -75,6 +79,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Опис проекту</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio2">
+							<i class="material-icons" style="color: white" id="audio2">volume_up</i>
+						</button>
+						<audio id="a-audio2" src="audio/lesson-06-сard-02.ogg"></audio>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -101,6 +109,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Ліцензія</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio3">
+							<i class="material-icons" style="color: white" id="audio3">volume_up</i>
+						</button>
+						<audio id="a-audio3" src="audio/lesson-06-сard-03.ogg"></audio>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -115,6 +127,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Файлова структура проекту</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio4">
+							<i class="material-icons" style="color: white" id="audio4">volume_up</i>
+						</button>
+						<audio id="a-audio4" src="audio/lesson-06-сard-04.ogg"></audio>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -142,6 +158,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Ігнорування небажаних файлів</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio5">
+							<i class="material-icons" style="color: white" id="audio5">volume_up</i>
+						</button>
+						<audio id="a-audio5" src="audio/lesson-06-сard-05.ogg"></audio>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -182,6 +202,10 @@
 				<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col mdl-grid">
 					<div class="mdl-card__title">
 						<h3 class="mdl-card__title-text">Налаштування атрибутів</h3>
+						<button class="mdl-button music" onclick="play(event)" id="audio6">
+							<i class="material-icons" style="color: white" id="audio6">volume_up</i>
+						</button>
+						<audio id="a-audio6" src="audio/lesson-06-сard-06.ogg"></audio>
 					</div>
 					
 					<div class="mdl-card__supporting-text">
@@ -252,13 +276,25 @@ $('main').scroll(function(){
     }
   });
 });
-	
-	
-	/*var typed = new Typed('.typed', {
-		stringsElement: '#typed-strings', 
-	typeSpeed: 30
-	  });*/
+</script>
 
+<script>
+	function play(event)
+	{
+		var targ_but = "a-" + $(event.target)[0]['id'];
+		var x = document.getElementById(targ_but); 
+		if($(x)[0]['paused'] == false)
+		{
+			$(x).trigger('pause');
+		}
+		else
+		{
+			$('audio').each(function(){
+			this.pause(); 
+			}); 
+			$(x).trigger('play');
+		}		
+	}
 </script>
 </body>
 </html>
